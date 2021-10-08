@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Weather forecast</string>
+    <string name="approvedTime">Approved time: </string>
+    <string name="longitudeHint">Longitude</string>
+    <string name="latitudeHint">Latitude</string>
+    <string name="submit">Submit</string>
+    <string name="valid_time">Valid time:</string>
+    <string name="temperature">Temperature</string>
+    <string name="cloud_coverage">Cloud coverage:</string>
+    <string name="longitude">Longitude:</string>
+    <string name="latitude">Latitude:</string>
+</resources>

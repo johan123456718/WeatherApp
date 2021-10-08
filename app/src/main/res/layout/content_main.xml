@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_centerHorizontal="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/approvedTimeLayer"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/grey"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="1dp">
+
+        <TextView
+            android:id="@+id/approvedTimeText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:text="@string/approvedTime"
+            android:textColor="@color/black"
+            />
+
+    </LinearLayout>
+
+        <LinearLayout
+            app:layout_constraintTop_toBottomOf="@+id/approvedTimeLayer"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/longitudeValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/longitude"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/latitudeValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/latitude"
+                android:textColor="@color/black"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="570dp"
+                android:layout_gravity="center_horizontal"
+                android:scrollbars="vertical"
+                android:fadeScrollbars="false"
+                android:scrollbarThumbVertical="@android:color/darker_gray"
+                android:scrollbarSize="10dp"
+                android:scrollbarStyle="outsideOverlay" />
+
+        </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <EditText
+            android:id="@+id/longitudeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:autofillHints="@string/longitudeHint"
+            android:backgroundTint="@color/grey"
+            android:gravity="bottom"
+            android:hint="@string/longitudeHint"
+            android:inputType="numberDecimal"
+            android:textColor="@color/black"
+            android:maxLength="10"
+            android:textColorHint="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/latitudeText" />
+
+        <EditText
+            android:id="@+id/latitudeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autofillHints="@string/latitudeHint"
+            android:backgroundTint="@color/grey"
+            android:layout_gravity="center"
+            android:hint="@string/latitudeHint"
+            android:inputType="numberDecimal"
+            android:maxLength="10"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:backgroundTint="@color/grey"
+            android:text="@string/submit"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/longitudeText" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
